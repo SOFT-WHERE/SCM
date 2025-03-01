@@ -11,8 +11,15 @@ xmlns:th="http://www.thymeleaf.org">
 
 </head>
 <body>
+
+    <!-- navbar page i.e common header -->
+    <div data-th-replace="navbar :: navbar"></div>
+
     <!-- base page content -->
-    <section data-th-replace="${content}">Welcome to base.</section>
+    <div class="p-4">
+        <section data-th-replace="${content}">Welcome to base.</section>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
     <th:block data-th-replace="${script}"></th:block>
 </body>
