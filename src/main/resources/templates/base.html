@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" 
+<html
+class="dark" 
+lang="en" 
 th:fragment="parent(content, title, script)"
 xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -9,8 +11,10 @@ xmlns:th="http://www.thymeleaf.org">
     <link rel="stylesheet" data-th-href="@{/css/output.css}"/>
     <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
+<body class="dark:bg-gray-800 dark:text-white">
 
     <!-- navbar page i.e common header -->
     <div data-th-replace="navbar :: navbar"></div>
@@ -21,6 +25,7 @@ xmlns:th="http://www.thymeleaf.org">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.1/dist/flowbite.min.js"></script>
+    <script data-th-src="@{'/js/script.js'}"></script>
     <th:block data-th-replace="${script}"></th:block>
 </body>
 </html>
