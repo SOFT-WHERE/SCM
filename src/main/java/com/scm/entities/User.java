@@ -1,8 +1,13 @@
 package com.scm.entities;
 
+import java.util.ArrayList;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,5 +40,8 @@ public class User {
     private boolean phoneVerified=false;
 
     private Providers provider=Providers.SELF;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private ArrayList<Contact> contacts=new ArrayList<>();
 
 }
