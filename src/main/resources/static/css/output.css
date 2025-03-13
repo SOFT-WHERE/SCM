@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.14 | MIT License | https://tailwindcss.com */
 .\@container {
   container-type: inline-size;
 }
@@ -40,9 +40,6 @@
   overflow: visible;
   clip: auto;
   white-space: normal;
-}
-.\!relative {
-  position: relative !important;
 }
 .absolute {
   position: absolute;
@@ -736,9 +733,6 @@
 .scroll-smooth {
   scroll-behavior: smooth;
 }
-.rounded-full {
-  border-radius: calc(infinity * 1px);
-}
 .border {
   border-style: var(--tw-border-style);
   border-width: 1px;
@@ -1265,6 +1259,7 @@
   --tw-inset-shadow-color: initial;
 }
 .outline-hidden {
+  --tw-outline-style: none;
   outline-style: none;
   @media (forced-colors: active) {
     outline: 2px solid transparent;
@@ -1294,9 +1289,6 @@
 .sepia {
   --tw-sepia: sepia(100%);
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-}
-.\!filter {
-  filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,) !important;
 }
 .filter {
   filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -1438,9 +1430,6 @@
 .outline-solid {
   --tw-outline-style: solid;
   outline-style: solid;
-}
-.\[vite\:css\] {
-  vite: css;
 }
 .\[vite\:html\] {
   vite: html;
